@@ -26,7 +26,7 @@ public class FoodsDataGenerator implements IDataGenerator {
         FoodProperties foodComponent = Objects.requireNonNull(foodItem.components().get(DataComponents.FOOD));
         float foodPoints = foodComponent.nutrition();
         float saturationRatio = foodComponent.saturation() * 2.0F;
-        float saturation = foodComponent.saturation();
+        float saturation = foodPoints * saturationRatio;
 
         foodDesc.addProperty("foodPoints", foodPoints);
         foodDesc.addProperty("saturation", saturation);
